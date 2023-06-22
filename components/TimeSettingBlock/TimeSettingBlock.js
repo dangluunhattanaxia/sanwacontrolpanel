@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleSwitch from "./ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./TimeSettingBlock.scss";
 
 class TimeSettingBlock extends React.Component {

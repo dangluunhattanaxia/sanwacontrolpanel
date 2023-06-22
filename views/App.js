@@ -1,13 +1,12 @@
-// import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/Login.js';
-import ListTodo from './Todos/ListTodo';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import Nav from './Nav/Nav';
-import Home from './Example/Home';
+import Login from './Login/Login.js';
+import Auth from './Auth/Auth.js';
+
+import Home from './Home/Home';
 import {
   BrowserRouter,
   Switch,
@@ -27,17 +26,15 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <Nav />
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <Switch>
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/todo">
-              <ListTodo />
+            <Route path="/auth">
+              <Auth />
             </Route>
             <Route path="/login">
-              <MyComponent />
+              <Login />
             </Route>
           </Switch>
 
