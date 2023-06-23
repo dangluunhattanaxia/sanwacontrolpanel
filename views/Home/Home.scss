@@ -31,6 +31,27 @@ th{
     }
 }
 
+td{
+    &.title_default{
+        background-color:#002060;
+        color: white;
+        border-color:white;
+    }
+    &#primary_stop_col{
+        color:#FFFF00 ;
+    }
+    &.title_onoff{
+        background-color:#E0FFFF;
+        border-color:white;
+    }
+    &.title_A_type{
+        background-color:#FFFACD;
+    }
+    &.title_B_type{
+        background-color:#90ee90;
+    }
+}
+
 input{
     &.change_mode{
         background-color:#C8C8C8;

@@ -1,88 +1,40 @@
 import React from 'react';
 import './Auth.scss'
 class Auth extends React.Component {
-
-
-    //key:value
-    state = {
-        arrJobs: [
-            { id: 'abcJob1', title: 'Developers', salary: '500' },
-            { id: 'abcJob2', title: 'Testers', salary: '400' },
-            { id: 'abcJob3', title: 'Project managers', salary: '1000' }
-        ]
-    }
-
-    addNewJob = (job) => {
-        console.log('check job from parent: ', job)
-
-        this.setState({
-            arrJobs: [...this.state.arrJobs, job]
-        })
-    }
-
-    deleteAJob = (job) => {
-        let currenJobs = this.state.arrJobs;
-        currenJobs = currenJobs.filter(item => item.id !== job.id);
-        this.setState({
-            arrJobs: currenJobs
-        })
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        console.log('>> run didupdate: ', 'prev state: ', prevState, ' current state: ', this.state)
-    }
-    componentDidMount() {
-        console.log('>>> run component did mount')
-    }
-
     /* 
     JSX => return block
     fragment
     */
-
-    //re-render
     render() {
         return (
             <>
-                <form className="form-login">
-                    <h3>Sign In</h3>
-                    <div className="mb-3">
-                        <label>
-                            Email address:
-                        </label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Enter email"
-                        />
+            <div class="container d-flex justify-content-center login_base_container">
+                <form className="form-auth align-self-center border">
+                    <div class="container-fluid justify-content-md-center form_header">
+                        遠隔操作システム ログイン
+                    </div>
+
+                    <div class="container form_inner_container">
+                        <h1>LOGIN</h1>
+                        <div class="alert alert-secondary" role="alert">
+                            入力したログインIDに認証コードを送信しました。<br/>メールに記載された認証コードを入力してください。
+                        </div>
+
+                        <div class="row d-flex align-items-center form_auth_row">
+                            <h4 class="col-3">認証コード:</h4>
+                            <div class="col-9">
+                                <input type="password" className="form-control"/>
+                            </div>
+                        </div>
                         
-                    </div>
-                    <div className="mb-3">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            className="form-control"
-                            placeholder="Enter password"
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <div className="custom-control custom-checkbox">
-                            <input
-                                type="checkbox"
-                                className="custom-control-input"
-                                id="customCheck1"
-                            />
-                            <label className="custom-control-label" htmlFor="customCheck1">
-                            Remember me
-                            </label>
+                        <div className="row">
+                            <div class="col-3"> </div>
+                            <button type="submit" className="col-2 btn btn-primary btn-lg fw-bold">Login</button>
                         </div>
                     </div>
-                    <div className="d-grid">
-                        <button type="submit" className="btn btn-primary">
-                        Submit
-                        </button>
-                    </div>
                 </form>
+            </div>
+                
             </>
         )
     }

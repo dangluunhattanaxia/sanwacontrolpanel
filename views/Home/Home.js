@@ -25,7 +25,7 @@ class Home extends React.Component {
                             <h1 class="col-1"> </h1>
                         </div>
                         <div class="row flex">
-                            <div class="col-8">
+                            <div class="col-9">
                                 <img src="./Exm.png" alt="img-thumbnail"/>
                             </div>
                         </div>
